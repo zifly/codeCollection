@@ -1,0 +1,26 @@
+新建一个repositories 文件夹后，github会告诉你象下面这样弄就可以传东西到你自己的github仓库了。
+但是，很多人并没有上传成功，对git使用方法不了解，弄得不知所措。
+
+echo "# codeCollection" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/zzz/xxx.git
+git push -u origin master
+
+在这一段中，github提示掉了两个步骤：
+在输入"git commit -m "first commit""后, git会提醒你：
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'xxx@xxx.(none)')
+
+OK，照着做，然后再 git commit 以及后面的步骤，然后一切OK.
